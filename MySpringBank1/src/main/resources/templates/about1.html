@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About SafeBank</title>
+<style>
+.header1 {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1220px;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.container {
+	margin: 80px;
+	overflow: hidden;
+}
+
+h1 {
+	margin: 0;
+}
+
+.content {
+	background: #fff;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	margin-top: 20px;
+	background: #007bff;
+	color: #fff;
+}
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">SafeBank</div>
+		<nav class="nav-links">
+			<a href="#hero">Home</a> <a href="" th:href="@{/account/service}">Services</a>
+			<a href="" th:href="@{/account/about}">About</a> <a href=""
+				th:href="@{/account/contact}">Contact</a> <a href="#login">Login</a>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="content">
+			<h2>Our Mission</h2>
+			<p>SafeBank is dedicated to providing secure and efficient
+				banking solutions. We prioritize customer security, innovation, and
+				convenience.</p>
+
+			<h2>Why Choose Us?</h2>
+			<ul>
+				<li>Secure and encrypted transactions</li>
+				<li>24/7 customer support</li>
+				<li>User-friendly online banking</li>
+				<li>Innovative financial solutions</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<p>&copy; 2025 SafeBank. All rights reserved.</p>
+	</footer>
+</body>
+</html>

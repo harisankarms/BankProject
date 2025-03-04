@@ -1,0 +1,83 @@
+#parent {
+	height: 450px;
+	width: 1200px;
+	/* border: 2px solid red; */
+	position: relative;
+	top: 40px;
+	left: 30px;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('https://images.unsplash.com/photo-1613243555978-636c48dc653c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+	border-radius: 50px;
+	background-position: center;
+	padding: 5px;
+	margin-top: 50px;
+}
+
+#div1 {
+	height: 350px;
+	width: 300px;
+	/* border: 2px solid blue; */
+	position: relative;
+	top: 40px;
+	left: 70px;
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px 7px rgb(54, 61, 69);
+	background-color: white;
+}
+
+#div2 {
+	height: 350px;
+	width: 300px;
+	/* border: 2px solid blue; */
+	position: relative;
+	bottom: 333px;
+	left: 430px;
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px 7px rgb(54, 61, 69);
+	background-color: white;
+}
+
+#div3 {
+	height: 350px;
+	width: 300px;
+	/* border: 2px solid blue; */
+	position: relative;
+	bottom: 703px;
+	left: 790px;
+	border-radius: 30px;
+	box-shadow: 0px 0px 10px 7px rgb(54, 61, 69);
+	background-color: white;
+}
+
+h1 {
+	position: relative;
+	top: 60px;
+	left: 80px;
+	text-shadow: 2px 2px 2.5px rgb(82, 86, 211);
+	font-family: sans-serif;
+}
+
+#h3 {
+	position: relative;
+	top: 60px;
+	left: 30px;
+}
+
+button {
+	position: relative;
+	top: 120px;
+	left: 90px;
+	height: 50px;
+	width: 120px;
+	padding: 14px;
+	border-radius: 7px;
+	background-color: rgb(93, 151, 221);
+	color: white;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+button:hover {
+	background-color: #078a14;
+	cursor: pointer;
+}

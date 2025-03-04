@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Application</title>
+<style>
+.header {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1260px;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f4f4f4;
+	margin: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('https://images.unsplash.com/photo-1613243555978-636c48dc653c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+	border-radius: 50px;
+	background-position: center;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: relative;
+	max-width: 800px;
+	justify-content: center;
+	
+}
+
+.box {
+	width: 250px;
+	height: 150px;
+	background: #DFFFFF;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: transform 0.3s, box-shadow 0.3s;
+	padding: 10px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.box:hover {
+	transform: translateY(-5px);
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.deposit button {
+	background: #7BCCB5;
+	color: white;
+}
+
+.withdraw button {
+	background: #7BCCB5;
+	color: white;
+}
+
+.balance button {
+	background: #7BCCB5;
+	color: white;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+@media ( max-width : 768px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">SafeBank</div>
+		<nav class="nav-links">
+			<a href="#hero">Home</a> <a href="" th:href="@{/account/service}">Services</a>
+			<a href="" th:href="@{/account/about}">About</a> <a href=""
+				th:href="@{/account/contact}">Contact</a> <a href="#login">Login</a>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="box deposit">
+			<a th:href="@{/account/deposit}">
+				<button type="submit" th:href="@{/account/withdraw}">Deposit</button>
+			</a>
+		</div>
+		<div class="box withdraw">
+			<a th:href="@{/account/withdraw}">
+				<button type="submit">Withdraw</button>
+			</a>
+		</div>
+		<div class="box balance">
+			<a th:href="@{/account/checkbal}">
+				<button type="submit" th:href="@{/account/checkbal}">Check
+					Balance</button>
+			</a>
+		</div>
+	</div>
+</body>
+</html>

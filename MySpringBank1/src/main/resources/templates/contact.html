@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Contact Form</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1280px;
+	top: 0;
+	z-index: 1000;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+body {
+	background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-container {
+	background: rgba(255, 255, 255, 0.95);
+	width: 50%;
+	max-width: 800px;
+	margin-top: 80px;
+	padding: 10px;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	display: flex;
+	gap: 30px;
+	padding: 10px;
+}
+
+.contact-info {
+	flex: 1;
+	padding-right: 30px;
+	border-right: 2px solid #eee;
+}
+
+.contact-form {
+	flex: 1;
+	padding-left: 30px;
+}
+
+h2 {
+	color: #1e3c72;
+	margin-bottom: 30px;
+	font-size: 28px;
+	position: relative;
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 50px;
+	height: 3px;
+	background: #1e3c72;
+}
+
+.form-group {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.form-group i {
+	position: absolute;
+	left: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #666;
+}
+
+input, textarea {
+	width: 100%;
+	padding: 12px 20px 12px 40px;
+	border: 2px solid #ddd;
+	border-radius: 8px;
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+	border-color: #1e3c72;
+	box-shadow: 0 0 8px rgba(30, 60, 114, 0.2);
+	outline: none;
+}
+
+textarea {
+	height: 120px;
+	padding-left: 20px;
+}
+
+button {
+	background: #1e3c72;
+	color: white;
+	padding: 14px 30px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+button:hover {
+	background: #2a5298;
+	transform: translateY(-2px);
+}
+
+.contact-info-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.contact-info-item i {
+	background: #1e3c72;
+	color: white;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.social-links {
+	margin-top: 30px;
+	display: flex;
+	gap: 15px;
+}
+
+.social-links a {
+	color: #1e3c72;
+	font-size: 24px;
+	transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+	color: #2a5298;
+	transform: translateY(-3px);
+}
+
+@media ( max-width : 768px) {
+	.contact-container {
+		flex-direction: column;
+		width: 90%;
+	}
+	.contact-info, .contact-form {
+		padding: 0;
+		border: none;
+	}
+}
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="logo">SafeBank</div>
+		<nav class="nav-links">
+			<a href="#hero">Home</a> <a href="" th:href="@{/account/service}">Services</a>
+			<a href="" th:href="@{/account/about}">About</a> <a href=""
+				th:href="@{/account/contact}">Contact</a> <a href="#login">Login</a>
+		</nav>
+	</header>
+	<div class="contact-container">
+		<div class="contact-info">
+			<h2>Get in Touch</h2>
+			<div class="contact-info-item">
+				<i class="fas fa-map-marker-alt"></i>
+				<div>
+					<h3>Visit Us</h3>
+					<p>
+						AMRA 6A<br>Kochi,cok 2425
+					</p>
+				</div>
+			</div>
+			<div class="contact-info-item">
+				<i class="fas fa-phone"></i>
+				<div>
+					<h3>Call Us</h3>
+					<p>
+						+9645665432<br>Mon-Fri: 9am - 5pm
+					</p>
+				</div>
+			</div>
+			<div class="contact-info-item">
+				<i class="fas fa-envelope"></i>
+				<div>
+					<h3>Email Us</h3>
+					<p>
+						support@safebank.com<br>24/7 Support
+					</p>
+				</div>
+			</div>
+			<div class="social-links">
+				<a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i
+					class="fab fa-twitter"></i></a> <a href="#"><i
+					class="fab fa-linkedin"></i></a> <a href="#"><i
+					class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<form class="contact-form">
+			<h2>Quick Contact</h2>
+			<div class="form-group">
+				<i class="fas fa-user"></i> <input type="text"
+					placeholder="Full Name" required>
+			</div>
+			<div class="form-group">
+				<i class="fas fa-envelope"></i> <input type="email"
+					placeholder="Email Address" required>
+			</div>
+			<div class="form-group">
+				<i class="fas fa-phone"></i> <input type="tel"
+					placeholder="Phone Number" required>
+			</div>
+			<div class="form-group">
+				<i class="fas fa-comment"></i>
+				<textarea placeholder="Your Message" required></textarea>
+			</div>
+			<button type="submit">
+				Send Message <i class="fas fa-paper-plane"></i>
+			</button>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.header {
+	background-color: #004a8d;
+	color: white;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 1230px;
+	top: 0;
+	z-index: 1000;
+	margin-bottom: 15;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+	<header class="header">
+		<div class="logo">PrimeBank</div>
+		<nav class="nav-links">
+			<a href="" th:href="@{/accounts/about}">Home</a> <a href="#services"
+				th:href="@{/accounts/service}">Services</a> <a href="#about">About</a>
+			<a href="#contact">Contact</a> <a href="#login">Login</a>
+		</nav>
+	</header>
+
+	<div id="parent">
+		<div id="div1">
+
+			<h1>Withdraw</h1>
+			<button>withdraw</button>
+
+		</div>
+		<div id="div2">
+			<h1>Deposit</h1>
+			<button>deposit</button>
+
+		</div>
+		<div id="div3">
+
+			<h1 id="h3">Balance enquiry</h1>
+			<button>balance</button>
+
+		</div>
+	</div>
